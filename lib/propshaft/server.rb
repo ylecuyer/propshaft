@@ -18,7 +18,8 @@ class Propshaft::Server
           "content-type"    => asset.content_type.to_s,
           "vary"            => "Accept-Encoding",
           "etag"            => asset.digest,
-          "cache-control"   => "public, max-age=31536000, immutable"
+          "cache-control"   => "public, max-age=31536000, immutable",
+          "Service-Worker-Allowed" => "/",
         },
         [ compiled_content ]
       ]
